@@ -1,0 +1,190 @@
+.app__works {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    .head-text {
+        display: inline-flex;
+        height: 116px;
+        flex-wrap: wrap;
+        justify-content: center;
+        .Typewriter__wrapper {
+            color: var(--secondary-color) !important;
+        }
+        .Typewriter__cursor {
+            color: white;
+        }
+        @media screen and (min-width: 667px) {
+            height: 116px;
+        }
+    }
+}
+
+.app__work-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0 2rem;
+
+    .app__work-filter-item {
+        padding: 0.5rem 1rem;
+        border-radius: 0.2rem;
+        background: rgba(black, 0.2);
+        background-color: rgba(black, 0.2);
+        color: var(--lightGray-color);
+        font-weight: 800;
+
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 0.5rem;
+
+        &:hover {
+            background: var(--secondary-color);
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        @media screen and (min-width: 2000px) {
+            padding: 1rem 2rem;
+            border-radius: 0.85rem;
+        }
+    }
+
+    .item-active {
+        background: var(--lime-color);
+        background-color: var(--lime-color);
+        color: #fff;
+    }
+}
+
+.app__work-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .app__work-item {
+        width: 270px;
+        flex-direction: column;
+        margin: 2rem;
+        padding: 1rem;
+        border-radius: 0rem;
+        background-color: var(--gray);
+        color: #000;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            box-shadow: 0 0 25px rgba(228, 228, 228, 0.3);
+        }
+
+        @media screen and (min-width: 2000px) {
+            width: 470px;
+            padding: 1.25rem;
+            border-radius: 0rem;
+        }
+
+        @media screen and (max-width: 300px) {
+            width: 100%;
+            margin: 1rem;
+        }
+    }
+}
+
+.app__work-img {
+    width: 100%;
+    height: 230px;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        object-fit: cover;
+    }
+
+    @media screen and (min-width: 2000px) {
+        height: 350px;
+    }
+}
+
+.app__work-hover {
+    position: absolute;
+    // top: 90px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    opacity: 1;
+    transition: all 0.3s ease;
+    overflow: hidden;
+
+    div {
+        width: 60px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 1);
+        color: #fff;
+        margin: 3rem 3.75rem;
+        font-family: var(--font-base);
+        font-weight: 800;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        margin-top: 230px;
+
+        svg {
+            width: 50%;
+            height: 50%;
+            color: var(--white-color);
+            transition: all 0.1s ease-in-out;
+        }
+
+        &:hover {
+            svg {
+                transform: scale(1.2);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+    div.projectSection {
+        border-top-right-radius: 50%;
+        svg.projectLink {
+            color: var(--secondary-color);
+        }
+    }
+    div.repoSection {
+        border-top-left-radius: 50%;
+        svg.repoLink {
+            color: var(--lime-color);
+        }
+    }
+}
+
+.app__work-content {
+    padding: 0.5rem;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+
+    h4 {
+        margin-top: 1rem;
+        line-height: 1.5;
+
+        @media screen and (min-width: 2000px) {
+            margin-top: 3rem;
+        }
+    }
+
+    .app__work-tag {
+        position: absolute;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        background-color: #fff;
+        top: -25px;
+    }
+}

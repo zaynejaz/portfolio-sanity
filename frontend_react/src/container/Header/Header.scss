@@ -1,0 +1,329 @@
+#home {
+    position: relative;
+    // background: url("../../assets/bgIMG.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    z-index: 1;
+
+    .app__wrapper {
+        padding: 0;
+
+        .copyright {
+            display: none;
+        }
+    }
+}
+
+.app__header {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    padding: 6rem 2rem 0rem;
+
+    @media screen and (min-width: 2000px) {
+        padding-top: 8rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 450px) {
+        padding: 6rem 1rem 2rem;
+    }
+}
+
+// .app__header-info {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100%;
+//     margin: 0 2rem;
+
+//     @media screen and (max-width: 1200px) {
+//         width: 100%;
+//         margin-right: 0rem;
+//     }
+// }
+
+.app__header-badge {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .badge-cmp,
+    .tag-cmp {
+        padding: 1rem 2rem;
+        // background: var(--white-color);
+        background: transparent;
+        border-radius: 15px;
+        flex-direction: row;
+        width: 100% !important;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+        p.head-text,
+        p.head-text-HW,
+        p.head-text-HW span,
+        p.p-text,
+        h1.head-text {
+            color: white !important;
+            text-align: center;
+        }
+
+        p.head-text-HW span {
+            text-transform: lowercase !important;
+        }
+
+        h1.head-text {
+            color: var(--lime-color) !important;
+        }
+    }
+
+    .tag-cmp {
+        flex-direction: column;
+        margin-top: 3rem;
+        height: 225px;
+
+        p {
+            // font-family: "Roboto Medium", sans-serif;
+            font-size: 50px;
+            color: white;
+            font-weight: 600;
+            width: 100%;
+            // text-transform: capitalize;
+            text-align: center;
+            .Typewriter__wrapper {
+                font-size: 50px;
+
+                span.Typewriter-text__span {
+                    color: var(--lime-color) !important;
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+
+    span {
+        font-size: 2.5rem;
+
+        @media screen and (min-width: 2000px) {
+            font-size: 5rem;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+.app__header-circles {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+    margin-left: 1rem;
+
+    div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: var(--white-color);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+        img {
+            width: 60%;
+            height: 60%;
+        }
+    }
+
+    div:nth-child(1) {
+        width: 100px;
+        height: 100px;
+    }
+
+    div:nth-child(2) {
+        margin: 1.75rem;
+        width: 150px;
+        height: 150px;
+    }
+
+    div:nth-child(3) {
+        width: 70px;
+        height: 70px;
+    }
+
+    @media screen and (min-width: 2000px) {
+        div:nth-child(2) {
+            width: 400px;
+            height: 400px;
+        }
+
+        div:nth-child(3) {
+            width: 170px;
+            height: 170px;
+        }
+
+        div:nth-child(1) {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+
+        div {
+            margin: 1rem;
+        }
+    }
+}
+
+.app__header-item {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+        z-index: 1;
+    }
+
+    .overlay_circle {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 100%;
+        height: 90%;
+    }
+
+    @media screen and (max-width: 1200px) {
+        margin: 2rem 0;
+    }
+}
+// ----------------------------------------
+// ----------------------------------------
+// ----------------------------------------
+// ----------CANVAS BG ANIMATION-----------
+// ----------------------------------------
+// ----------------------------------------
+// ----------------------------------------
+.video-bg {
+    margin-left: -50vw;
+    position: absolute !important;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.video-bg-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    opacity: 1;
+    z-index: 0;
+}
+
+.video-bg-texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+// ----------------------------------------
+// ----------------------------------------
+// ----------------------------------------
+// ----------TEXT GLITCH-----------
+// ----------------------------------------
+// ----------------------------------------
+// ----------------------------------------
+
+.TextGlitch {
+    position: relative;
+    color: #fff;
+    line-height: 1em;
+    font-size: 96px;
+    font-family: "oswald", monospace;
+    // font-family: monospace;
+}
+
+.TextGlitch-clip {
+    position: relative;
+    // background-color: #333;
+}
+.TextGlitch-clip + .TextGlitch-clip {
+    position: absolute;
+    top: 0;
+}
+.TextGlitch:not(.TextGlitch-blended) .TextGlitch-clip + .TextGlitch-clip {
+    display: none;
+}
+
+.TextGlitch-word {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.TextGlitch-blend {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: 0.1s;
+    transition-property: opacity;
+}
+.TextGlitch-blendA {
+    color: #2af;
+    margin: -0.03em 0 0 0.03em;
+    mix-blend-mode: darken;
+}
+.TextGlitch-blendB {
+    color: #f64;
+    margin: 0.03em 0 0 -0.03em;
+    mix-blend-mode: color-burn;
+}
+.TextGlitch-blended .TextGlitch-blend {
+    opacity: 0.4;
+}
